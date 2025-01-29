@@ -1,7 +1,7 @@
 import os
 from tkinter import filedialog, Menu, messagebox, simpledialog
 from customtkinter import CTk, CTkLabel, CTkEntry, CTkButton, CTkOptionMenu
-from VideoMod import Convert_MOV_2_MP4, cut_movie
+from VideoMod import convert_video_file, cut_movie
 
 import customtkinter
 customtkinter.set_appearance_mode("dark")
@@ -111,7 +111,7 @@ class VideoConverterApp(CTk):
         bitrate = int(self.bitrate_entry.get()) if self.bitrate_entry.get() else None
         fps = int(self.fps_entry.get()) if self.fps_entry.get() else None
         rotate_degrees = int(self.rotate_entry.get()) if self.rotate_entry.get() else None
-        Convert_MOV_2_MP4(input_file, output_dir, bitrate=bitrate, fps=fps, rotate_degrees=rotate_degrees)
+        convert_video_file(input_file, output_dir, bitrate=bitrate, fps=fps, rotate_degrees=rotate_degrees)
         # Show message box after conversion is finished
         messagebox.showinfo("Conversion Complete", "Video conversion completed successfully.")
 
