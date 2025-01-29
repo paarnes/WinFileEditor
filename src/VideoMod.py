@@ -6,7 +6,7 @@ Module for the ConvertVideo_GUI
 # from moviepy.video.fx import resize
 from moviepy.video.fx.resize import resize
 from moviepy.editor import VideoFileClip
-
+import sys
 
 def Convert_MOV_2_MP4(input_file, output_file, bitrate=None, fps=None, rotate_degrees=None):
     """
@@ -17,6 +17,10 @@ def Convert_MOV_2_MP4(input_file, output_file, bitrate=None, fps=None, rotate_de
 
     my_clip = VideoFileClip(input_file)
 
+    # ##
+    # hold_stdout = sys.stdout
+    # sys.stdout = open("test_log", 'w')
+    # ##
     if rotate_degrees:
         my_clip = my_clip.rotate(rotate_degrees)
 
@@ -27,6 +31,8 @@ def Convert_MOV_2_MP4(input_file, output_file, bitrate=None, fps=None, rotate_de
         my_clip.write_videofile(output_file, fps=fps, bitrate=bitrate)
     else:
         my_clip.write_videofile(output_file, fps=fps)
+
+    # sys.stdout = hold_stdout # test
     return
 
 
