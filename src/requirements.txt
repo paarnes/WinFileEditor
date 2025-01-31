@@ -1,0 +1,5 @@
+moviepy==1.0.3
+pillow
+customtkinter
+pillow_heif
+auto-py-to-exe
