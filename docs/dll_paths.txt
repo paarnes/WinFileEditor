@@ -1,0 +1,11 @@
+## Path to the DLL files that needs to be added to make it work. Else you will get the following error:
+## "importerror: dll load failed while importing pyexpat: the specified module could not be found"
+
+Paths:
+C:\Users\perhe\anaconda3\Library\bin\liblzma.dll
+C:\Users\perhe\anaconda3\Library\bin\libbz2.dll
+C:\Users\perhe\anaconda3\Library\bin\libcrypto-3-x64.dll
+C:\Users\perhe\anaconda3\Library\bin\ffi-8.dll
+C:\Users\perhe\anaconda3\Library\bin\libexpat.dll
+C:\Users\perhe\anaconda3\Library\bin\tk86t.dll
+C:\Users\perhe\anaconda3\Library\bin\tcl86t.dll
