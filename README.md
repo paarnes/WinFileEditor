@@ -1,2 +1,6 @@
 # WinFileEditor
- A repository for a simple software for modifying images and videos 
+A repository for simple software to modify images and videos.
+
+
+<img src="docs/img/gui.png" alt="GUI" width="800" height="auto">
+
